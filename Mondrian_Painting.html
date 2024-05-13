@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian_Painting</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container{
+      width: 500px;
+      background-color: #000;
+      height: 500px;
+      display: grid;
+      grid-template-columns: 200px auto;
+      grid-template-rows: 270px 220px;
+      gap: 10px;
+    }
+    .one{
+      background-color: red;
+    }
+    .two, .three{
+      background-color: grey;
+    }
+    .four{
+      display: grid;
+      grid-template-columns: auto 30px;
+      gap: 10px;
+    }
+    .four .fourA{
+      display: grid;
+      grid-template-columns: 0.5fr;
+      grid-template-rows: 200px 10px;
+      gap: 10px;
+    }
+    .four .fourA .fourA1{
+      background-color: grey;
+    }
+    .four .fourA .fourA2{
+      background-color: yellow;
+    }
+    .fourA1{
+      grid-column: span 2;
+    }
+    .four .fourB{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+    .four .fourB .fourB1{
+      background-color: blue;
+    }
+    .four .fourB .fourB2{
+      background-color: gray;
+    }
+    .four .fourB .fourB2{
+      grid-row: span 6;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four">
+      <div class="fourA">
+        <div class="fourA1"></div>
+        <div class="fourA2"></div>
+      </div>
+      <div class="fourB">
+        <div class="fourB1"></div>
+        <div class="fourB2"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
